@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 337599834}
   - component: {fileID: 337599833}
   - component: {fileID: 337599832}
+  - component: {fileID: 337599836}
   m_Layer: 5
   m_Name: Main Canvas
   m_TagString: Untagged
@@ -298,6 +299,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &337599836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337599831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88647612238479945b45d7a25826b875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &556578682
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +763,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -5825,8 +5838,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1568009353}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+      - m_Target: {fileID: 11400000, guid: bb7642e833bdbdf46ab2aeb5edd652c8, type: 2}
+        m_TargetAssemblyTypeName: Menu2, Assembly-CSharp
         m_MethodName: OnNewGame
         m_Mode: 1
         m_Arguments:
