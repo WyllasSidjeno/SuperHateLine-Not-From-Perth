@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimeManager : MonoBehaviour {
-    public float scale {
+public class TimeManager {
+    public static float scale {
         get => Time.timeScale;
         set {
             Time.timeScale = value;
