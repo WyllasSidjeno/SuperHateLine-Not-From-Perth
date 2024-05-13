@@ -671,6 +671,10 @@ PrefabInstance:
       propertyPath: _Gun
       value: 
       objectReference: {fileID: 229386690}
+    - target: {fileID: 3816792194854260843, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6589353427224914395, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1207,7 +1211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1054560685
 Transform:
   m_ObjectHideFlags: 0

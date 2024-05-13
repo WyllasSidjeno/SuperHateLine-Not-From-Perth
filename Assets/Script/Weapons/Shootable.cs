@@ -26,7 +26,7 @@ public class Shootable : MonoBehaviour {
     [SerializeField]
     [Min(0)]
     [Tooltip("The speed of the bullets.")]
-    private float _BulletSpeed = 10;
+    public float _BulletSpeed = 10;
 
     [SerializeField]
     [Tooltip("The sound that is played when the gun is shot.")]
