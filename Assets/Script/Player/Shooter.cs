@@ -15,7 +15,9 @@ public class Shooter : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (Input.GetButtonDown("Fire1")) {
-            _Gun.Shoot();
+            if (_Gun.Shoot()) {
+                GetComponent<Animator>().SetTrigger("Shoot");
+            }
         }
     }
 }
