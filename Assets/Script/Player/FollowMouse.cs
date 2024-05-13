@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -17,18 +18,23 @@ public class FollowMouse : MonoBehaviour {
 
     private bool mInDeadZone = false;
 
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float _LerpSpring = 0.5f;
+
     // TODO: Don't duplicate code
-    private Vector3 mousePosition {
-        get {
-            Vector3 mousePos = Input.mousePosition;
-            Vector3 worldPoint = _Cam.ScreenToWorldPoint(mousePos);
-            //worldPoint.z = 0f;
-            return worldPoint;
-        }
+    private Vector3 mousePosition;
+
+    private void Update()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        Vector3 worldPoint = _Cam.ScreenToWorldPoint(mousePos);
+        //worldPoint.z = 0f;
+        mousePosition = worldPoint;
     }
 
     // Update is called once per frame
-    private void Update() {
+    private void FixedUpdate() {
         Vector2 mouseDir = mousePosition - _Offset.position;
         float deadDeadZone = 0.2f;
         float angleToMouse;
@@ -48,8 +54,9 @@ public class FollowMouse : MonoBehaviour {
         angleToMouse = Mathf.Atan2(mouseDir.y, mouseDir.x) * Mathf.Rad2Deg - 90f;
 
         var rotation = Quaternion.AngleAxis(angleToMouse, Vector3.forward);
+        var lerped = Quaternion.Lerp(transform.rotation, rotation, _LerpSpring);
 
-        transform.rotation = rotation;
+        transform.rotation = lerped;
     }
 
     private void OnDrawGizmos() {
