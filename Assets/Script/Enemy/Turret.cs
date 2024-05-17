@@ -31,35 +31,11 @@ public class Turret : MonoBehaviour {
         }
     }
 
-    private Vector3 PredictTarget(
-            Vector3 startPos,
-            Vector3 targetPos, Vector3 targetVel,
-            float bulletVel
-    ) {
-
-        float a = Vector3.Dot(targetVel, targetVel) - bulletVel * bulletVel;
-        float b = 2f * Vector3.Dot(targetVel, targetPos - startPos);
-        float c = Vector3.Dot(targetPos - startPos, targetPos - startPos);
-
-        float discriminant = b * b - 4f * a * c;
-
-        // If we were to shoot in the past, just shoot at the player
-        if (discriminant < 0) {
-            return targetPos;
-        }
-
-        // t is the time it will take for the bullet to reach the player
-        float t = 2f * c / Mathf.Sqrt(discriminant - b);
-
-        // We can now predict where the player will be in t seconds
-        return targetPos + targetVel * t;
-    }
-
     /**
      * Shortcut for passing the parameters
      */
     private Vector3 PredictTarget() {
-        return PredictTarget(
+        return Predictive.PredictTarget(
             transform.position,
             _Target.transform.position,
             mTargetrb.velocity,
@@ -90,7 +66,7 @@ public class Turret : MonoBehaviour {
     private void OnDrawGizmos() {
         // Show the predicted position in the scene
         Gizmos.color = Color.red;
-        Vector3 pos = PredictTarget(
+        Vector3 pos = Predictive.PredictTarget(
             _Offset.position,
             _Target.transform.position,
             _Target.GetComponent<Rigidbody2D>().velocity,
