@@ -40528,9 +40528,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Campfire
       objectReference: {fileID: 0}
-    - target: {fileID: 2802123619951474681, guid: ec40477b56d21a742bb6cb43d5efa82c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 2967596854771105426, guid: ec40477b56d21a742bb6cb43d5efa82c, type: 3}
+      propertyPath: LightsModule.light
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7869393644781311013, guid: ec40477b56d21a742bb6cb43d5efa82c, type: 3}
       propertyPath: m_RootOrder
