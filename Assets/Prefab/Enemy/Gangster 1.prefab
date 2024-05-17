@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5815054156989138725}
   - component: {fileID: 8945588145798808934}
   - component: {fileID: 2638034189736492832}
+  - component: {fileID: 6515615894928900910}
+  - component: {fileID: 5814864122727727549}
   m_Layer: 7
   m_Name: Gangster 1
   m_TagString: Untagged
@@ -36,7 +38,7 @@ Transform:
   - {fileID: 7868934941670974486}
   - {fileID: 1982968812971531250}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1190068928399362989
 MonoBehaviour:
@@ -132,6 +134,72 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6515615894928900910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042475621133922067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9d795461ac3c041bf1635804658d32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _CollisionEnterEvent:
+    _PersistentCalls:
+    - _Target: {fileID: 5814864122727727549}
+      _MemberName: Die
+      _PersistentArguments:
+      - _Type: 14
+        _Int: 0
+        _String: UnityEngine.Collision2D, UnityEngine.Physics2DModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+  _CollisionStayEvent:
+    _PersistentCalls: []
+  _CollisionExitEvent:
+    _PersistentCalls: []
+--- !u!114 &5814864122727727549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042475621133922067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac4d3cd3a2d0d6441ab70f0fb6bc840d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathSprites:
+  - {fileID: 1760151923, guid: 8d2cbe28f16a33a4697ff09abdcbe2eb, type: 3}
+  _SpriteRenderer: {fileID: 7743853518302563894}
+  _ToDisable:
+  - {fileID: 1190068928399362989}
+  - {fileID: 8945588145798808934}
+  _OnDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2638034189736492832}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody2D, UnityEngine
+        m_MethodName: set_drag
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 15
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _KillLayers:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &2440652891186915557
 GameObject:
   m_ObjectHideFlags: 0
