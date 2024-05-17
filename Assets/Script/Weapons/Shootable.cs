@@ -7,6 +7,12 @@ public class Shootable : MonoBehaviour {
     [Min(0)]
     [Tooltip("The maximum number of bullets that can be held at once.")]
     private int _BaseAmmo;
+    public int BaseAmmo
+    {
+        get { return _BaseAmmo; }
+    }
+
+
 
     [SerializeField]
     [Min(0)]
@@ -38,17 +44,20 @@ public class Shootable : MonoBehaviour {
 
     public bool isPlayer;
     private int mCurrentAmmo;
+    public int CurrentAmmo
+    {
+        get { return mCurrentAmmo; }
+    }
+
     private float mLastShotTime;
+
+    // get for base ammo
+
 
     // Start is called before the first frame update
     void Start() {
         mCurrentAmmo = _BaseAmmo;
         mLastShotTime = Time.time - 1 / _FireRate;  // Allow the player to shoot immediately
-    }
-
-    // Update is called once per frame
-    void Update() {
-
     }
 
     public bool Shoot() {
