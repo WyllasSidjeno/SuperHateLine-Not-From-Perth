@@ -21,7 +21,6 @@ public class SimpleMove : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        //mRigidbody.AddForce(mDirection * _MoveSpeed);
-        mRigidbody.position += mDirection * _MoveSpeed * Time.deltaTime;
+        mRigidbody.AddForce(mDirection * _MoveSpeed);
     }
 }
