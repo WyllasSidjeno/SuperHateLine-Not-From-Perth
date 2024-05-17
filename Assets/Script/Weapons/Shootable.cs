@@ -7,8 +7,7 @@ public class Shootable : MonoBehaviour {
     [Min(0)]
     [Tooltip("The maximum number of bullets that can be held at once.")]
     private int _BaseAmmo;
-    public int BaseAmmo
-    {
+    public int BaseAmmo {
         get { return _BaseAmmo; }
     }
 
@@ -42,10 +41,13 @@ public class Shootable : MonoBehaviour {
     [Tooltip("The bullet prefab that is shot.")]
     private Bullet _Bullet;
 
+    [SerializeField]
+    [Tooltip("Particle emitter for the empty casings.")]
+    private ParticleSystem _CasingParticles;
+
     public bool isPlayer;
     private int mCurrentAmmo;
-    public int CurrentAmmo
-    {
+    public int CurrentAmmo {
         get { return mCurrentAmmo; }
     }
 
@@ -58,6 +60,8 @@ public class Shootable : MonoBehaviour {
     void Start() {
         mCurrentAmmo = _BaseAmmo;
         mLastShotTime = Time.time - 1 / _FireRate;  // Allow the player to shoot immediately
+        var main = _CasingParticles.main;
+            main.loop = false;
     }
 
     public bool Shoot() {
@@ -72,13 +76,17 @@ public class Shootable : MonoBehaviour {
             bullet.isPlayerBullet = isPlayer;
             if (isPlayer) {
                 bullet.gameObject.layer = LayerMask.NameToLayer("Player");
-            } else {
+            }
+            else {
                 bullet.gameObject.layer = LayerMask.NameToLayer("Enemy");
             }
             bullet.transform.Rotate(0, 0, Random.Range(-_BulletSpread, _BulletSpread));
         }
         if (_ShootSound != null) {
             AudioSource.PlayClipAtPoint(_ShootSound, transform.position);
+        }
+        if (_CasingParticles != null) {
+            _CasingParticles.Play();
         }
         return true;
     }

@@ -737,7 +737,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 000000003bc1f6af818c8249b1878775ed57080d
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -827,6 +827,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7292958988175867435, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292958988175867435, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7292958988175867435, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7532987247514058422, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -881,6 +893,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8057088733475070203, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753873982174104899, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
+      propertyPath: _BaseAmmo
+      value: 191
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753873982174104899, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
+      propertyPath: _FireRate
+      value: 30.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979393237507084184, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
+      propertyPath: EmissionModule.m_BurstCount
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
