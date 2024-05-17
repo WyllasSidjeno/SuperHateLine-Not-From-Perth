@@ -41,6 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Rain
+  - name: Background
     uniqueID: 2952184123
+    locked: 0
+  - name: Physical
+    uniqueID: 1233292417
+    locked: 0
+  - name: Character
+    uniqueID: 1971816369
+    locked: 0
+  - name: Foreground
+    uniqueID: 218650605
     locked: 0
