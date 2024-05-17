@@ -9,19 +9,34 @@ public class UIAdapter : MonoBehaviour
     [SerializeField]
     private Shootable bulletScript;
     [SerializeField]
-    private TextMeshProUGUI bullet_mesh;
+    private TextMeshProUGUI bulletMesh;
 
+    [SerializeField]
+    private GameObject enemyHolder;
+    [SerializeField]
+    private TextMeshProUGUI enemyMesh;
 
     // Update is called once per frame
     void Update()
     {
         if (bulletScript != null)
         {
-            bullet_mesh.text =
+            bulletMesh.text =
                 string.Format("[{0}/{1}]",
                 bulletScript.CurrentAmmo,
                 bulletScript.BaseAmmo
                 );
+        }
+
+        if (enemyHolder != null)
+        {
+            int nbOfObject = enemyHolder.transform.childCount;
+            enemyMesh.text = 
+                string.Format("{0} traitor{1} left",
+                nbOfObject, 
+                nbOfObject == 1 ? "s" : ""
+                );
+
         }
     }
 }
