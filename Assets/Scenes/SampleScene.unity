@@ -172,11 +172,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 599095573609538055, guid: 5885281c34aea9e4f96fd23b36860380, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5104656
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 599095573609538055, guid: 5885281c34aea9e4f96fd23b36860380, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.60697985
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 599095573609538055, guid: 5885281c34aea9e4f96fd23b36860380, type: 3}
       propertyPath: m_LocalPosition.z
@@ -188,15 +188,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 599095573609538055, guid: 5885281c34aea9e4f96fd23b36860380, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 599095573609538055, guid: 5885281c34aea9e4f96fd23b36860380, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 599095573609538055, guid: 5885281c34aea9e4f96fd23b36860380, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 599095573609538055, guid: 5885281c34aea9e4f96fd23b36860380, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -221,6 +221,14 @@ PrefabInstance:
     - target: {fileID: 2117686181338632159, guid: 5885281c34aea9e4f96fd23b36860380, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715755510622433213, guid: 5885281c34aea9e4f96fd23b36860380, type: 3}
+      propertyPath: _BaseAmmo
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715755510622433213, guid: 5885281c34aea9e4f96fd23b36860380, type: 3}
+      propertyPath: _BulletSpeed
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -817,7 +825,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 3816792194854260843, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7532987247514058422, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
       propertyPath: m_RootOrder

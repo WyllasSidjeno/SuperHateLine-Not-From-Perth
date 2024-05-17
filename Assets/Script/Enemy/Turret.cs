@@ -20,7 +20,7 @@ public class Turret : MonoBehaviour {
         mAimer = GetComponent<AimAtTarget>();
         mShooter = GetComponentInChildren<Shootable>();
         mAnimator = GetComponent<Animator>();
-        mTargetrb = GetComponent<Rigidbody2D>();
+        mTargetrb = _Target.GetComponent<Rigidbody2D>();
     }
 
     private void OnValidate() {
@@ -52,7 +52,6 @@ public class Turret : MonoBehaviour {
         float t = 2f * c / Mathf.Sqrt(discriminant - b);
 
         // We can now predict where the player will be in t seconds
-        Debug.Log((t, targetVel));
         return targetPos + targetVel * t;
     }
 
