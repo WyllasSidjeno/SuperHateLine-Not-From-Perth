@@ -5863,6 +5863,8 @@ GameObject:
   - component: {fileID: 1299349081}
   - component: {fileID: 1299349080}
   - component: {fileID: 1299349079}
+  - component: {fileID: 1299349082}
+  - component: {fileID: 1299349083}
   m_Layer: 5
   m_Name: New Game Button
   m_TagString: Untagged
@@ -5935,9 +5937,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: bb7642e833bdbdf46ab2aeb5edd652c8, type: 2}
-        m_TargetAssemblyTypeName: Menu2, Assembly-CSharp
-        m_MethodName: OnNewGame
+      - m_Target: {fileID: 1299349082}
+        m_TargetAssemblyTypeName: NewGameEvent, Assembly-CSharp
+        m_MethodName: invoke
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5985,6 +5987,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299349077}
   m_CullTransparentMesh: 1
+--- !u!114 &1299349082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299349077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9797da29b8ba64aa6441a52f2ac5f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _MyEvent:
+    _PersistentCalls:
+    - _Target: {fileID: 646872462}
+      _MemberName: CrossFadeColor
+      _PersistentArguments:
+      - _Type: 10
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 5
+        _Int: 0
+        _String: 
+        _X: 2
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 1
+        _Int: 1
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 1
+        _Int: 0
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+    - _Target: {fileID: 1299349083}
+      _MemberName: Invoke
+      _PersistentArguments: []
+--- !u!114 &1299349083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299349077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f574d8b2153a0d4fa15f5de878f680c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Event:
+    _PersistentCalls:
+    - _Target: {fileID: 337599836}
+      _MemberName: OnNewGame
+      _PersistentArguments: []
+  _Delay: 2
 --- !u!1 &1335821671
 GameObject:
   m_ObjectHideFlags: 0
