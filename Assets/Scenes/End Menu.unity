@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 200256782}
   - component: {fileID: 200256781}
   m_Layer: 5
-  m_Name: Subtitle (1)
+  m_Name: Creators
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
