@@ -5,12 +5,8 @@ using UnityEngine;
 public class Shooter : MonoBehaviour {
     [SerializeField]
     private Shootable _Gun;
+    public Shootable Gun => _Gun;
 
-
-    // Start is called before the first frame update
-    void Start() {
-
-    }
 
     // Update is called once per frame
     void Update() {

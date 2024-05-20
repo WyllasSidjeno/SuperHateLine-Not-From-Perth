@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 694882255726555721}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2612511917284758355
 BoxCollider2D:
@@ -103,6 +103,14 @@ PrefabInstance:
     - target: {fileID: 1099076412086253498, guid: 700bc9d9359388c408803dd99108e611, type: 3}
       propertyPath: m_Name
       value: FliesParticleSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915789678703122878, guid: 700bc9d9359388c408803dd99108e611, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3915789678703122878, guid: 700bc9d9359388c408803dd99108e611, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 9010764541216535398, guid: 700bc9d9359388c408803dd99108e611, type: 3}
       propertyPath: m_RootOrder

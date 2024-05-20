@@ -21,13 +21,11 @@ public class Killable : MonoBehaviour {
     [SerializeField]
     private LayerMask _KillLayers;
 
+    private Sprite alive_sprite;
+
     // Start is called before the first frame update
     void Start() {
-
-    }
-
-    // Update is called once per frame
-    void Update() {
+        alive_sprite = _SpriteRenderer.sprite;
 
     }
 
@@ -42,5 +40,13 @@ public class Killable : MonoBehaviour {
                 _OnDie.Invoke();
             }
         }
+    }
+
+    public void MenuDie() {
+        _SpriteRenderer.sprite = deathSprites.OrderBy(i => Random.value).First();
+    }
+
+    public void MenuReset() {
+        _SpriteRenderer.sprite = alive_sprite;
     }
 }
