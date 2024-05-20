@@ -28757,6 +28757,10 @@ PrefabInstance:
       propertyPath: _Cam
       value: 
       objectReference: {fileID: 1559672538}
+    - target: {fileID: 3816792194854260843, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
+      propertyPath: _AudioSource
+      value: 
+      objectReference: {fileID: 898714603}
     - target: {fileID: 7532987247514058422, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
       propertyPath: m_RootOrder
       value: 1

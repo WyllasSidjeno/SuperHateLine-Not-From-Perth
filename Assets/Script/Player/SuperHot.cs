@@ -17,6 +17,9 @@ public class SuperHot : MonoBehaviour {
     [Min(0f)]
     private float _SlowFactor = 40;
 
+    [SerializeField]
+    private AudioSource _AudioSource;
+
     // Start is called before the first frame update
     void Start() {
     }
@@ -34,6 +37,7 @@ public class SuperHot : MonoBehaviour {
         //lerpTime = action ? .1f : lerpTime;
         //Debug.Log(Time.timeScale);
         TimeManager.scale = Mathf.Lerp(Time.timeScale, 1f / time, 1f / lerpTime);
+        _AudioSource.pitch = TimeManager.scale;
     }
 
     // Update is called once per frame
