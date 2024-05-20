@@ -1,10 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using UltEvents;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Requite ULT Event Holder
+[RequireComponent(typeof(UltEventHolder))]
+
 public class SewerTrigger : MonoBehaviour
 {
+
+    UltEventHolder ultEventHolder;
+    void Start() {
+        ultEventHolder = GetComponent<UltEventHolder>();
+    }
+
     [SerializeField]
     GameObject EnemyContainer;
 
@@ -15,7 +25,7 @@ public class SewerTrigger : MonoBehaviour
         {
             Debug.Log("Sewer trigger was called and is valid.");
             // Change scene
-            SceneManager.LoadScene("End menu");
+            ultEventHolder.Invoke();
         }
         else
         {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Menu : MonoBehaviour
+public class MenuUtilitary : MonoBehaviour
 {
     public void OnNewGame() {
         // Todo : Delegate and event and shit for the on black
