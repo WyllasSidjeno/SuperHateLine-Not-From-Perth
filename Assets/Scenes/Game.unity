@@ -41467,6 +41467,26 @@ PrefabInstance:
       propertyPath: prewarm
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 567533218342926524, guid: 301f1c6d09633e342bd70b1f50e226fe, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.3529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 567533218342926524, guid: 301f1c6d09633e342bd70b1f50e226fe, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 567533218342926524, guid: 301f1c6d09633e342bd70b1f50e226fe, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 567533218342926524, guid: 301f1c6d09633e342bd70b1f50e226fe, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 567533218342926524, guid: 301f1c6d09633e342bd70b1f50e226fe, type: 3}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2763544539007408917, guid: 301f1c6d09633e342bd70b1f50e226fe, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -41882,6 +41902,14 @@ PrefabInstance:
     - target: {fileID: 2936785888926393976, guid: 4a6beed2a1ca7c246bcf812694d7f3c6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827771760387922065, guid: 4a6beed2a1ca7c246bcf812694d7f3c6, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827771760387922065, guid: 4a6beed2a1ca7c246bcf812694d7f3c6, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
