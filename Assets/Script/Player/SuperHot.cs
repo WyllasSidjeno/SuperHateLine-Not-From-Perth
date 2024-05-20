@@ -37,7 +37,10 @@ public class SuperHot : MonoBehaviour {
         //lerpTime = action ? .1f : lerpTime;
         //Debug.Log(Time.timeScale);
         TimeManager.scale = Mathf.Lerp(Time.timeScale, 1f / time, 1f / lerpTime);
-        _AudioSource.pitch = TimeManager.scale;
+        AudioSource[] audioSources = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource audioSource in audioSources) {
+            audioSource.pitch = TimeManager.scale;
+        }
     }
 
     // Update is called once per frame
