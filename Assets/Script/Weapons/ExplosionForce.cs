@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public static class Rigidbody2DExt {
@@ -27,6 +28,20 @@ public static class Rigidbody2DExt {
         float forceRatio = 1 - (explosionDistance / explosionRadius);
 
         rb.AddForce(Mathf.Lerp(0, explosionForce, forceRatio) * explosionDir, mode);
+    }
+
+    public static void AddForceTowards(
+        this Rigidbody2D rb,
+        GameObject location,
+        float force,
+        bool normalized,
+        ForceMode2D mode = ForceMode2D.Force
+    ) {
+        Vector2 direction = (Vector2)location.transform.position - rb.position;
+        if (normalized) {
+            direction.Normalize();
+        }
+        rb.AddForce(direction * force, mode);
     }
 }
 
