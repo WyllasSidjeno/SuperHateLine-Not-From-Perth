@@ -33178,6 +33178,62 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8057088733475070203, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
   m_PrefabInstance: {fileID: 1932573480}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1911807161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911807158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8159c62844031a24a8b3f245be720cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1911807162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911807158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289ff940279d54e4e92f632d7d3823dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Event:
+    _PersistentCalls:
+    - _Target: {fileID: 1766739930}
+      _MemberName: OnValidEndGameTrigger
+      _PersistentArguments: []
+    - _Target: {fileID: 2013652036}
+      _MemberName: CrossFadeAlpha
+      _PersistentArguments:
+      - _Type: 5
+        _Int: 0
+        _String: 
+        _X: 1
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 5
+        _Int: 0
+        _String: 
+        _X: 3
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
+      - _Type: 1
+        _Int: 1
+        _String: 
+        _X: 0
+        _Y: 0
+        _Z: 0
+        _W: 0
+        _Object: {fileID: 0}
 --- !u!1001 &1932573480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33200,11 +33256,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7532987247514058422, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.78
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7532987247514058422, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.72
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7532987247514058422, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33249,7 +33305,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8057088733475070203, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1911807162}
+    - targetCorrespondingSourceObject: {fileID: 8057088733475070203, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1911807161}
   m_SourcePrefab: {fileID: 100100000, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
 --- !u!1001 &1934454150
 PrefabInstance:
