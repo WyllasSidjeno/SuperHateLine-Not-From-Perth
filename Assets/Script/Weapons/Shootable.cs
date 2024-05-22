@@ -45,13 +45,19 @@ public class Shootable : MonoBehaviour {
     [Tooltip("Particle emitter for the empty casings.")]
     private ParticleSystem _CasingParticles;
 
+    [SerializeField]
+    private UltEvents.UltEvent _ShootEvent;
+
+    [SerializeField]
+    private UltEvents.UltEvent _ReloadEvent;
+
+    public bool doEvents;
+
     public bool isPlayer;
-    private int mCurrentAmmo;
-    public int CurrentAmmo {
-        get { return mCurrentAmmo; }
-    }
+    public int mCurrentAmmo { get; private set; }
 
     private float mLastShotTime;
+    private bool mHasReloaded;
 
     // get for base ammo
 
@@ -64,11 +70,14 @@ public class Shootable : MonoBehaviour {
             main.loop = false;
     }
 
+    public bool CanShoot() {
+        return mCurrentAmmo >= 0 && Time.time - mLastShotTime >= 1 / _FireRate;
+    }
+
     public bool Shoot() {
-        if (mCurrentAmmo == 0 || Time.time - mLastShotTime < 1 / _FireRate) {
-            return false;
-        }
+        if (!CanShoot()) return false;
         mLastShotTime = Time.time;
+        mHasReloaded = false;
         --mCurrentAmmo;
         for (int i = 0; i < _BulletsPerShot; ++i) {
             Bullet bullet = Instantiate(_Bullet, transform.position, transform.rotation);
@@ -88,6 +97,19 @@ public class Shootable : MonoBehaviour {
         if (_CasingParticles != null) {
             _CasingParticles.Play();
         }
+
+        if (doEvents) {
+            _ShootEvent.Invoke();
+        }
         return true;
+    }
+
+    private void Update() {
+        if (!mHasReloaded && CanShoot()) {
+            mHasReloaded = true;
+            if (doEvents) {
+                _ReloadEvent.Invoke();
+            }
+        }
     }
 }
