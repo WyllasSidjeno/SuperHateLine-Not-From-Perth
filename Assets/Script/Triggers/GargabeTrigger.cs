@@ -9,6 +9,11 @@ public class GargabeTrigger : MonoBehaviour
 
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("Garbage trigger was called.");
+        // If tag is player
+        if (other.tag == "Player") {
+            Debug.Log("Garbage trigger was called.");
+
+        }
+       
     }
 }
