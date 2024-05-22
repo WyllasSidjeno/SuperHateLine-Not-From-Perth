@@ -22,6 +22,12 @@ public class MainMenuShooter : MonoBehaviour
         while (true) {
             yield return new WaitForSeconds(Random.Range(0.1f, 2.5f));
             shootable.Shoot();
+            // shoot using animator
+            Animator animator = GetComponent<Animator>();
+
+            if (animator != null) {
+                animator.SetTrigger("Shoot");
+            }
         }
     }
 }
