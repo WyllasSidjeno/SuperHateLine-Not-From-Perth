@@ -7,15 +7,19 @@ public class SuperHot : MonoBehaviour {
 
     [SerializeField]
     [Min(0f)]
-    private float _LerpTimeSlow = 10;
+    private float _LerpTimeSlow = 10f;
 
     [SerializeField]
     [Min(0f)]
-    private float _LerpTimeSpeed = 40;
+    private float _LerpTimeSpeed = 40f;
 
     [SerializeField]
     [Min(0f)]
-    private float _SlowFactor = 40;
+    private float _SlowFactor = 40f;
+
+    [SerializeField]
+    [Min(0f)]
+    private float _AudioSlowFactor = 2f;
 
     [SerializeField]
     private AudioSource _AudioSource;
@@ -36,10 +40,13 @@ public class SuperHot : MonoBehaviour {
         //time = action ? 1 : time;
         //lerpTime = action ? .1f : lerpTime;
         //Debug.Log(Time.timeScale);
-        TimeManager.scale = Mathf.Lerp(Time.timeScale, 1f / time, 1f / lerpTime);
+        float scale = Mathf.Lerp(Time.timeScale, 1f / time, 1f / lerpTime);
+        TimeManager.scale = scale;
+
+        float audioPitchScale = Mathf.Clamp(scale, 0f, 1f) * _AudioSlowFactor;
         AudioSource[] audioSources = FindObjectsOfType<AudioSource>();
         foreach (AudioSource audioSource in audioSources) {
-            audioSource.pitch = TimeManager.scale;
+            audioSource.pitch = Mathf.Lerp(audioSource.pitch, audioPitchScale, 0.01f);
         }
     }
 

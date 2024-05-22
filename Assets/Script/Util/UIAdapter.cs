@@ -24,8 +24,8 @@ public class UIAdapter : MonoBehaviour {
         }
     }
 
-    void Update() {
-        enemyMesh.text = $"{EnemyCount} traitor{(EnemyCount == 1 ? "" : "s")} left";
+    public void UpdateEnemyText() {
+         enemyMesh.text = $"{EnemyCount} traitor{(EnemyCount == 1 ? "" : "s")} left";
     }
 
     // SINGLETON WOO
