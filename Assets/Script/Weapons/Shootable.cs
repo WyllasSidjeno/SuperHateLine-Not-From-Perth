@@ -75,10 +75,10 @@ public class Shootable : MonoBehaviour {
             bullet.speed = _BulletSpeed;
             bullet.isPlayerBullet = isPlayer;
             if (isPlayer) {
-                bullet.gameObject.layer = LayerMask.NameToLayer("Player");
+                bullet.gameObject.layer = LayerMask.NameToLayer("Player Bullet");
             }
             else {
-                bullet.gameObject.layer = LayerMask.NameToLayer("Enemy");
+                bullet.gameObject.layer = LayerMask.NameToLayer("Enemy Bullet");
             }
             bullet.transform.Rotate(0, 0, Random.Range(-_BulletSpread, _BulletSpread));
         }
