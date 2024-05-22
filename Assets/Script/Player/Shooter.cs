@@ -31,6 +31,8 @@ public class Shooter : MonoBehaviour {
             value.GetComponentInChildren<Canvas>().worldCamera = _Cam;
             value.isPlayer = true;
             value.doEvents = true;
+
+            _Gun._PickupEvent.Invoke();
         }
     }
 

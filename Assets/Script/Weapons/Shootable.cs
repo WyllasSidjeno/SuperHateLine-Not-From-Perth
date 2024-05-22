@@ -51,6 +51,9 @@ public class Shootable : MonoBehaviour {
     [SerializeField]
     private UltEvents.UltEvent _ReloadEvent;
 
+    [SerializeField]
+    public UltEvents.UltEvent _PickupEvent;
+
     public bool doEvents;
 
     public bool isPlayer;

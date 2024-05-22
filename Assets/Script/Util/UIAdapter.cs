@@ -18,15 +18,20 @@ public class UIAdapter : MonoBehaviour {
     private TextMeshProUGUI enemyMesh;
 
     // Update is called once per frame
-    void Update() {
+    void Start() {
         if (enemyHolder != null) {
-            int nbOfObject = enemyHolder.transform.childCount;
-            enemyMesh.text = string.Format(
-                "{0} traitor{1} left",
-                nbOfObject,
-                nbOfObject == 1 ? "s" : ""
-            );
+            EnemyCount = enemyHolder.transform.childCount;
         }
+    }
+
+    void Update() {
+        enemyMesh.text = $"{EnemyCount} traitor{(EnemyCount == 1 ? "" : "s")} left";
+    }
+
+    // SINGLETON WOO
+    private static int EnemyCount = 0;
+    public static void DecrementEnemyText() {
+        --EnemyCount;
     }
 
     public void UpdateAmmoText(Shootable gun) {

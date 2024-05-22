@@ -28575,6 +28575,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e243000e67f0de6439fb3fdad0b8eb51, type: 3}
+--- !u!114 &961429123 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8753873982174104899, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
+  m_PrefabInstance: {fileID: 1932573480}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 305d4403ebee4ef4e872212e41cea986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &975436948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3819126674251996201, guid: 238c66a3c695ef246bbb447fe8b5f1b8, type: 3}
@@ -33043,6 +33054,14 @@ PrefabInstance:
       propertyPath: _Cam
       value: 
       objectReference: {fileID: 1559672538}
+    - target: {fileID: 505963265527127076, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
+      propertyPath: _OnPickup._PersistentCalls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 505963265527127076, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
+      propertyPath: _OnPickup._PersistentCalls.Array.data[0]._Target
+      value: 
+      objectReference: {fileID: 961429123}
     - target: {fileID: 950199296325321888, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
       propertyPath: _Cam
       value: 
