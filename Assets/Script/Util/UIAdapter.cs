@@ -29,7 +29,7 @@ public class UIAdapter : MonoBehaviour {
     }
 
     // SINGLETON WOO
-    private static int EnemyCount = 0;
+    public static int EnemyCount = 0;
     public static void DecrementEnemyText() {
         --EnemyCount;
     }

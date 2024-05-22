@@ -9,10 +9,13 @@ using UnityEngine.SceneManagement;
 
 public class SewerTrigger : MonoBehaviour
 {
-
+    [SerializeField]
     UltEventHolder ultEventHolder;
+    float time;
     void Start() {
         ultEventHolder = GetComponent<UltEventHolder>();
+        // store the current time
+        time = Time.time;
     }
 
     [SerializeField]
@@ -21,11 +24,15 @@ public class SewerTrigger : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(EnemyContainer.transform.childCount <= 0)
+        if(UIAdapter.EnemyCount == 0)
         {
             Debug.Log("Sewer trigger was called and is valid.");
             // Change scene
             ultEventHolder.Invoke();
+            float gameTime = Time.time - time;
+            PlayerPrefs.SetFloat("GameTime", gameTime);
+            PlayerPrefs.SetInt("EnemyCount", UIAdapter.EnemyCount);
+
         }
         else
         {

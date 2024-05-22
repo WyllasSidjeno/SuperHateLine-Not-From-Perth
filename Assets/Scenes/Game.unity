@@ -29046,6 +29046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43eef556a3cdc8f47afd4fa12373e948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UIAdapter: {fileID: 1932573481}
   EnemyContainer: {fileID: 609692852}
 --- !u!58 &1119205915
 CircleCollider2D:
@@ -33223,6 +33224,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1911807161}
   m_SourcePrefab: {fileID: 100100000, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
+--- !u!114 &1932573481 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 835470573626739173, guid: 3075453cd74fd0b4c9020ee44c2dc897, type: 3}
+  m_PrefabInstance: {fileID: 1932573480}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8fb3511063cf44787d3691ffbf5d89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1934454150
 PrefabInstance:
   m_ObjectHideFlags: 0

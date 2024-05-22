@@ -1,7 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using UnityEditor.UI;
 using UnityEngine;
 
 [RequireComponent(typeof(Transform))]

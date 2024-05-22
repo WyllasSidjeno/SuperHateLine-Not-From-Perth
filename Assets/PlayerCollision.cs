@@ -5,18 +5,20 @@ using UnityEngine;
 
 [RequireComponent(typeof(UltEventHolder))]
 [RequireComponent(typeof(CompositeCollider2D))]
-public class PlayerCollision : MonoBehaviour
-{
+public class PlayerCollision : MonoBehaviour {
+    private float startTime;
     private UltEventHolder ultEventHolder;
+
     private void Start() {
         ultEventHolder = GetComponent<UltEventHolder>();
+        startTime = Time.unscaledTime;
     }
 
-
     private void OnCollisionEnter2D(Collision2D collision) {
-        // if layer enemy
-        // if tag is bullet
         if (collision.gameObject.tag == "Bullet") {
+            float elapsedTime = Time.unscaledTime - startTime;  // Calculate the elapsed time
+            PlayerPrefs.SetFloat("GameTime", elapsedTime);
+            PlayerPrefs.SetInt("EnemyCount", UIAdapter.EnemyCount);
             ultEventHolder.Invoke();
         }
     }
