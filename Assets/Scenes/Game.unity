@@ -28332,7 +28332,7 @@ GameObject:
   - component: {fileID: 898714603}
   m_Layer: 0
   m_Name: Audio Source
-  m_TagString: Untagged
+  m_TagString: MusicAudio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31440,6 +31440,7 @@ GameObject:
   - component: {fileID: 1766739929}
   - component: {fileID: 1766739928}
   - component: {fileID: 1766739930}
+  - component: {fileID: 1766739931}
   m_Layer: 5
   m_Name: UI Canvas
   m_TagString: Untagged
@@ -31624,6 +31625,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c657e4aa6fa25ef428a7b10ba50885b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1766739931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766739921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa4e296e5a9d63458b22f3715d61570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _UpdateEvent:
+    _PersistentCalls:
+    - _Target: {fileID: 1766739926}
+      _MemberName: UpdateEnemyText
+      _PersistentArguments: []
+  _LateUpdateEvent:
+    _PersistentCalls: []
+  _FixedUpdateEvent:
+    _PersistentCalls: []
 --- !u!1001 &1772790447
 PrefabInstance:
   m_ObjectHideFlags: 0
