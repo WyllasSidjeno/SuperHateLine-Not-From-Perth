@@ -74,7 +74,7 @@ public class Shootable : MonoBehaviour {
     }
 
     public bool CanShoot() {
-        return mCurrentAmmo >= 0 && Time.time - mLastShotTime >= 1 / _FireRate;
+        return mCurrentAmmo > 0 && Time.time - mLastShotTime >= 1 / _FireRate;
     }
 
     public bool Shoot() {

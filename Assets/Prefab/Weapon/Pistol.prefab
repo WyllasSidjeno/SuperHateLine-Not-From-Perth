@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 599095573609538055}
   - component: {fileID: 5715755510622433213}
+  - component: {fileID: 7383367605271603277}
   - component: {fileID: 4442096444613141901}
   - component: {fileID: 9160133530811548048}
   - component: {fileID: 1792636958249502748}
@@ -59,17 +60,9 @@ MonoBehaviour:
   _CasingParticles: {fileID: 5382722705495928166}
   _ShootEvent:
     _PersistentCalls:
-    - _Target: {fileID: 4446815711556561691}
-      _MemberName: UpdateAmmoText
-      _PersistentArguments:
-      - _Type: 13
-        _Int: 0
-        _String: Shootable, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-        _X: 0
-        _Y: 0
-        _Z: 0
-        _W: 0
-        _Object: {fileID: 5715755510622433213}
+    - _Target: {fileID: 7383367605271603277}
+      _MemberName: Invoke
+      _PersistentArguments: []
   _ReloadEvent:
     _PersistentCalls:
     - _Target: {fileID: 4446815711556561691}
@@ -85,6 +78,25 @@ MonoBehaviour:
         _Object: {fileID: 5715755510622433213}
   _PickupEvent:
     _PersistentCalls:
+    - _Target: {fileID: 7383367605271603277}
+      _MemberName: Invoke
+      _PersistentArguments: []
+  doEvents: 0
+  isPlayer: 0
+--- !u!114 &7383367605271603277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117686181338632159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 289ff940279d54e4e92f632d7d3823dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Event:
+    _PersistentCalls:
     - _Target: {fileID: 4446815711556561691}
       _MemberName: UpdateAmmoText
       _PersistentArguments:
@@ -107,8 +119,6 @@ MonoBehaviour:
         _Z: 0
         _W: 0
         _Object: {fileID: 5715755510622433213}
-  doEvents: 0
-  isPlayer: 0
 --- !u!212 &4442096444613141901
 SpriteRenderer:
   m_ObjectHideFlags: 0
